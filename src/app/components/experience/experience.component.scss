@@ -1,0 +1,40 @@
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-content h5 {
+  font-weight: 600;
+}
+
+.timeline-content ul {
+  padding-left: 1.25rem;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-header h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.timeline-header small {
+  font-size: 12px;
+  color: #6c757d;
+}
+

@@ -1,0 +1,33 @@
+<div id="technologies" class="container custom-width py-5 mt-1 px-5">
+    <h3 class="mb-4">Technologies</h3>
+
+    <div *ngFor="let group of techStack" class="mb-3">
+        <h5 class="text-start mb-2 text-secondary fw-bold border-bottom pb-2">
+            {{ group.category }}
+        </h5>
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3"
+                *ngFor="let tech of group.items">
+                <div class="tech-item">
+                    <div class="d-flex align-items-center mb-2">
+                        <img [src]="tech.logo" class="me-2" [alt]="tech.name"
+                            style="height: 40px; width: auto;">
+                        <strong>{{ tech.name }}</strong>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div
+                            class="progress-bar bg-success"
+                            [style.width.%]="tech.percent"
+                            role="progressbar"
+                            [attr.aria-valuenow]="tech.percent"
+                            aria-valuemin="0"
+                            aria-valuemax="100">
+                        </div>
+                    </div>
+                    <small class="text-white">{{ tech.percent }}%</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

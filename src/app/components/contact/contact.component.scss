@@ -1,0 +1,36 @@
+form .custom-input {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #f1f1f1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form .custom-input::placeholder {
+  color: #888;
+}
+
+form .custom-input:focus {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #555;
+  box-shadow: none;
+}
+
+.custom-btn {
+  background-color: #f8f9fa;
+  color: #000;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-1px);
+}
+
+footer {
+  font-size: 14px;
+}

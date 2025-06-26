@@ -1,0 +1,28 @@
+<div id="education" class="container custom-width py-5 px-5">
+    <h3 class="mb-4">Education</h3>
+    <div class="timeline">
+        <div class="timeline-item" *ngFor="let edu of educationList">
+            <div class="timeline-content">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-1">{{ edu.institution }}</h5>
+                    <p class="mb-1" style="font-size: 12px;">{{ edu.date }}</p>
+                </div>
+
+                <p class="mb-1 fw-bold" style="font-size: 13px;">{{ edu.degree
+                    }}</p>
+                <p class="mb-1 fw-bold" style="font-size: 12px;">{{ edu.location
+                    }}</p>
+
+                <p class="fw-bold" style="font-size: 12px;">
+                    <span *ngIf="edu.CGPA; else showPercentage">CGPA: {{
+                        edu.CGPA }}</span>
+                    <ng-template #showPercentage>Percentage: {{ edu.Percentage
+                        }}%</ng-template>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

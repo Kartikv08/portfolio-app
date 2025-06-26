@@ -1,0 +1,33 @@
+img {
+  border: 1px solid #fff;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+.btn {
+  margin-top: 0.5rem;
+}
+
+.contact-bar a {
+  color: #6c757d; /* Bootstrap's text-muted gray */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-bar a:hover {
+  color: #ffffff; /* white on hover */
+}
+
+.link-hover {
+  transition: color 0.3s ease;
+}
+
+.link-hover:hover {
+  color: #ffffff;
+}

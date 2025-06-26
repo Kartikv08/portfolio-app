@@ -1,0 +1,26 @@
+<div id="experience" class="container custom-width py-5 px-5">
+  <h3 class="mb-4">Experiences</h3>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experiences">
+      <div class="timeline-content">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center">
+            <a [href]="exp.link"
+              target="_blank"
+              class="text-decoration-none text-white fw-bold">
+              {{ exp.company }}
+            </a>
+          </div>
+          <small class="text-secondary" style="font-size: 13px;">{{ exp.date
+            }}</small>
+        </div>
+        <p class="mb-1 fw-bold" style="font-size: 13px;">{{ exp.role }}</p>
+        <p class="mb-3" style="font-size: 13px;">{{ exp.location }}</p>
+        <ul>
+          <li class="text-secondary" style="font-size: 14px;"
+            *ngFor="let item of exp.points">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

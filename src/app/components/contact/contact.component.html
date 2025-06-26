@@ -1,0 +1,89 @@
+<div id="contact"  class="container custom-width py-5 px-5">
+    <h3 class="mb-4">Let's Talk</h3>
+    <div class="row g-4">
+        <!-- Contact Info -->
+        <div class="col-md-5">
+            <h5>Email :</h5>
+            <p><i class="bi bi-envelope-fill me-2"></i>
+                kartikvaishnav0805&#64;email.com</p>
+
+            <h5>Location :</h5>
+            <p><i class="bi bi-geo-alt-fill me-2"></i> Kota, Rajasthan,
+                India</p>
+
+            <h5>Socials:</h5>
+            <div class="d-flex gap-3 me-2">
+                <a href="https://www.linkedin.com/in/kartikvaishnav08/"
+                    target="_blank"
+                    class="text-secondary text-decoration-none ms-2">
+                    <i class="fab fa-linkedin me-1"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+            <h5 class="mb-3 fw-bold">Reach out:</h5>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <input
+                        type="text"
+                        formControlName="name"
+                        class="form-control custom-input"
+                        placeholder="Your name" />
+                    <div
+                        *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+                        class="text-danger small">
+                        Name is required.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input
+                        type="email"
+                        formControlName="email"
+                        class="form-control custom-input"
+                        placeholder="Your Email address" />
+                    <div
+                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
+                        class="text-danger small">
+                        <div
+                            *ngIf="contactForm.get('email')?.errors?.['required']">Email
+                            is required.</div>
+                        <div
+                            *ngIf="contactForm.get('email')?.errors?.['email']">Enter
+                            a valid email.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <textarea
+                        formControlName="message"
+                        rows="5"
+                        class="form-control custom-input"
+                        placeholder="Message"></textarea>
+                    <div
+                        *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"
+                        class="text-danger small">
+                        Message is required.
+                    </div>
+                </div>
+
+                <button
+                    class="btn custom-btn w-100"
+                    type="submit"
+                    [disabled]="sending">
+                    {{ sending ? 'Sending...' : 'Send Message' }}
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<footer class="bg-light text-center text-muted py-3 mt-5 border-top">
+  <div class="container">
+    <small>&copy; 2025 Kartik Vaishnav. All rights reserved.</small>
+  </div>
+</footer>
+

@@ -1,0 +1,45 @@
+.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.clickable:hover {
+  transform: scale(1.02);
+}
+
+.expanded-project {
+  background-color: #1a1a1a; // or use rgba(0, 0, 0, 0.4) if you want semi-transparent
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
